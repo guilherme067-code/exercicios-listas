@@ -1,0 +1,14 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Program {
+	List <String> list = new ArrayList<>();
+	
+	System.out.print("Quantos funcionários deseja registrar");
+	System.out.println("--------------------------------------");
+
+	
+
+}

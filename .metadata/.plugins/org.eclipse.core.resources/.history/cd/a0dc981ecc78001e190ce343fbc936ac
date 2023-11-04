@@ -1,0 +1,55 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class application {
+
+	public static void main(String[] args) {
+		List<String> list = new ArrayList<>();
+
+		list.add("fMaria");
+		list.add("alex");
+		list.add("bob");
+		list.add("fanna");
+		list.add(2, "fernando");
+		System.out.println(list.size());
+
+		//list.remove("anna");
+		//list.remove(0);
+
+		for (String x : list) {
+			System.out.println(x);
+		}
+
+		list.removeIf(x -> x.charAt(0) == 'a');
+		System.out.println("--------------------------------------");
+
+		for (String x : list) {
+			System.out.println(x);
+		}
+		
+		
+		System.out.println("--------------------------------------");
+		
+		
+		System.out.println("Index of bob "+ list.indexOf("bob"));
+		System.out.println("Index of bob "+ list.indexOf("marco"));
+		List<String> result = list.stream().filter(x -> x.charAt(0)== 'f').collect(Collectors.toList());
+		
+		for (String x : result) {
+			System.out.println(x);
+		}
+		
+		System.out.println("--------------------------------------");
+		
+		String name = list.stream().filter(x -> x.charAt(0)== 'f').findFirst().orElse(null);
+		System.out.print(name);
+
+		
+
+
+	}
+
+}

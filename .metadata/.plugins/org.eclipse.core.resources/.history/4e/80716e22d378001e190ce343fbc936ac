@@ -1,0 +1,18 @@
+package entities;
+
+public class Employer {
+	
+	int id;
+	String name;
+	Double salary;
+	
+	
+	
+	
+	public String toString() {
+		return "employer [id=" + id + ", name=" + name + ", salary=" + salary + "]";
+	}
+	
+	
+
+}
